@@ -74,12 +74,17 @@ app_data = []
 for file in applications:
     app_data.append(read_conference_sheet(file,quarter))
 app_data = pd.concat(app_data)
+# Reset the index
+app_data.sort_values(by=["dept","authors","paper_title","departure_date"],
+                     inplace=True)
+app_data.reset_index(drop=True,inplace=True)
 
 dsa_data = []
 for file in dsas:
     dsa_data.append(read_dsa_sheet(file,quarter))
 dsa_data = pd.concat(dsa_data)
-
+dsa_data.sort_values(by=['department','DSA_name'],inplace=True)
+dsa_data.reset_index(drop=True,inplace=True)
 
 # Now reorder the columns and rename them to a friendly version
 # trips
