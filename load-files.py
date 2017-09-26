@@ -6,15 +6,13 @@
 # load the libraries
 import pandas as pd
 from glob import glob
-import re
-
 
 # this is the directory to look into
 # applications = glob("O:/Talent Strategy - To process/Conference Applications/2017Q2/*.xlsm")
 applications = glob("O:\Talent Strategy - To process\Conference Applications/2017Q3/*.xlsm")
 dsas = glob("O:\Talent Strategy - To process\DSA Applications/2017Q3/*.xlsm")
 quarter = "2017Q3"
-save_file = "C:/Users/chja/Desktop/temp_ts_2017Q3.xlsx"
+save_file = "C:/Users/chja/Desktop/new_temp_ts_2017Q3.xlsx"
 
 
 def read_dsa_sheet(file_name,quarter):
