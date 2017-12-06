@@ -6,6 +6,7 @@
 # load the needed libraries
 import pandas as pd
 
+
 # this is the CC directory where the decision file should be kept and the file name
 cc_dir = "C:/Users/chja/Desktop"
 file_name = "new_temp_ts_2017Q3.xlsx"
